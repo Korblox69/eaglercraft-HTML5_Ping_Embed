@@ -1,14 +1,20 @@
 <html>
 <head>
-<title>Eaglercraft Server Embed Test</title>
-<script type="text/javascript" src="embed.js"></script>
-<script type="text/javascript">
-window.addEventListener("load", () => {
-	new ServerEmbed(document.getElementById("embed"), "75%").ping("wss://home.geobattery.com/");
-});
-</script>
+    <title>Eaglercraft Server Embed Test</title>
+    <script type="text/javascript" src="embed.js"></script>
+    <script type="text/javascript">
+        window.addEventListener("load", () => {
+            new ServerEmbed(document.getElementById("embed"), "75%").ping(
+                "wss://home.geobattery.com/", // addr
+                undefined, // name (optional, undefined to use default)
+                false,     // forceName: Do not force custom name
+                true,      // hideAddress: Hide the server address
+                true       // hideCracked: Hide cracked/authentication status
+            );
+        });
+    </script>
 </head>
 <body style="background-color:black;">
-<div id="embed"></div>
+    <div id="embed"></div>
 </body>
 </html>
